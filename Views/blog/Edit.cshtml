@@ -2,7 +2,7 @@
 
 @{
     Layout = "~/Views/Shared/Layout.cshtml";
-    ViewBag.Title = "Vložení nového záznamu";
+    ViewBag.Title = "Úprava dat uživatele";
 }
 
 <h2>@ViewBag.Title</h2>
@@ -16,7 +16,7 @@
     </fieldset>
     
     <fieldset class="form-actions">
-        <input class="btn btn-primary" type="submit" value="Vložit nového uživatele" />
+        <input class="btn btn-primary" type="submit" value="Upravit údaje" />
         @Html.ActionLink("Storno", "Index", null, new { @class="btn"})
     </fieldset>
 }

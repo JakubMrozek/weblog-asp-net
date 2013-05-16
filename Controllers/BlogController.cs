@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Web;
 using System.Web.Mvc;
+using System.Data;
 using Blog.Models;
 
 namespace Blog.Controllers
@@ -13,8 +14,8 @@ namespace Blog.Controllers
 
         public ActionResult Index()
         {
-            var posts = _db.Posts.ToList();
-            return View(posts);
+            var users = _db.Users.ToList();
+            return View(users);
         }
 
         public ActionResult Create()
@@ -23,18 +24,42 @@ namespace Blog.Controllers
         }
 
         [HttpPost]
-        public ActionResult Create(Post post)
+        public ActionResult Create(User user)
         {
             if (ModelState.IsValid)
             {
-                _db.Posts.Add(post);
+                _db.Users.Add(user);
                 _db.SaveChanges();
                 return RedirectToAction("Index");
             }
-            return View(post);
-
+            return View(user);
         }
 
+        public ActionResult Edit(int id)
+        {
+            User user = _db.Users.Find(id);
+            return View(user);  
+        }
+
+        [HttpPost]
+        public ActionResult Edit(User user)
+        {
+            if (ModelState.IsValid)
+            {
+                _db.Entry(user).State = EntityState.Modified;
+                _db.SaveChanges();
+                return RedirectToAction("Index");
+            }
+            return View(user);
+        }
+
+        public ActionResult Delete(int id)
+        {
+            User user = _db.Users.Find(id);
+            _db.Users.Remove(user);
+            _db.SaveChanges();
+            return RedirectToAction("Index");
+        }
 
     }
 }

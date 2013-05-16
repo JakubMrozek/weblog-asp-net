@@ -1,0 +1,32 @@
+﻿<!DOCTYPE html>
+<html>
+    <head>
+        <title>@ViewBag.Title</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link href="/Content/Css/bootstrap.css" rel="stylesheet"/>
+        <link href="/Content/Css/project.css" rel="stylesheet"/>
+    </head>
+  <body>
+
+    <div class="navbar navbar-inverse navbar-fixed-top">
+      <div class="navbar-inner">
+        <div class="container">
+          <a class="brand" href="/">Semestrální projekt</a>
+          <div class="nav-collapse collapse">
+            <ul class="nav">
+              <li><a href="/">Projekt</a></li>
+              <li><a href="/WS">WS GetAuthorization</a></li>
+            </ul>
+          </div><!--/.nav-collapse -->
+        </div>
+      </div>
+    </div>
+
+    <div class="container">
+
+      @RenderBody()
+
+    </div> <!-- /container -->
+
+  </body>
+</html>

@@ -8,6 +8,6 @@ namespace Blog.Models
 {
     public class BlogDataContext : DbContext
     {
-        public DbSet<Post> Posts { get; set; }
+        public DbSet<User> Users { get; set; }
     }
 }
