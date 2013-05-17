@@ -3,6 +3,9 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Web;
 using System.Web.Mvc;
+using Blog.Models;
+using System.Data;
+
 
 namespace Blog.Controllers
 {
@@ -43,20 +46,31 @@ namespace Blog.Controllers
 
         public ActionResult Insert()
         {
-            AppServiceClient client = new AppServiceClient();
-
-            string DegreeBefore = "Abc.";
-            string Name = "Aaaa";
-            string Surname = "Bvvv";
-            string DegreeAfter = "Csc";
-            string Street = "Ostravská 56";
-            int StreetNumber = 56;
-            string Town = "Český Těšín";
-            int Zipcode = 73701;
-
-            ViewData["Result"] = client.Insert(DegreeBefore, Name, Surname, DegreeAfter, Street, StreetNumber, Town, Zipcode);
-
+            ViewData["ShowForm"] = true;
             return View();
+        }
+
+        [HttpPost]
+        public ActionResult Insert(User user)
+        {
+            ViewData["ShowForm"] = true;
+
+            if (ModelState.IsValid)
+            {
+                AppServiceClient client = new AppServiceClient();
+                ViewData["Result"] = client.Insert(
+                    user.DegreeBefore, 
+                    user.Name, 
+                    user.Surname, 
+                    user.DegreeAfter, 
+                    user.Street, 
+                    user.StreetNumber, 
+                    user.Town, 
+                    user.Zipcode
+                );
+                ViewData["ShowForm"] = false;
+            }
+            return View(user);
         }
 
     }

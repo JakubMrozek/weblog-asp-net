@@ -1,8 +1,31 @@
-﻿@{
-    ViewBag.Title = "Count";
+﻿@model Blog.Models.User
+
+@{
     Layout = "~/Views/Shared/Layout.cshtml";
+    ViewBag.Title = "Webová služba: vložení do databáze";
+    bool ShowForm = (bool)@ViewData["ShowForm"];
 }
 
-<h2>Webová služba: vložení do databáze</h2>
+<h2>@ViewBag.Title</h2>
 
-<p>Výsledek: <strong>@ViewData["Result"]</strong>.</p>
+@if (ShowForm)
+{
+
+    using (Html.BeginForm())
+    {
+        @Html.ValidationSummary(true)
+
+        <fieldset class="well">
+             @Html.EditorForModel()
+        </fieldset>
+    
+        <fieldset class="form-actions">
+            <input class="btn btn-primary" type="submit" value="Vložit nového uživatele" />
+            @Html.ActionLink("Storno", "Index", null, new { @class="btn"})
+        </fieldset>
+    }
+
+} else 
+{
+    <p>Výsledek: <strong>@ViewData["Result"]</strong>.</p>
+}
