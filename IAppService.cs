@@ -13,5 +13,8 @@ namespace Blog
     {
         [OperationContract]
         int Count();
+
+        [OperationContract]
+        bool Insert(string DegreeBefore, string Name, string Surname, string DegreeAfter, string Street, int StreetNumber, string Town, int Zipcode);
     }
 }

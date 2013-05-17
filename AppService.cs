@@ -11,12 +11,15 @@
 
 
 [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "3.0.0.0")]
-[System.ServiceModel.ServiceContractAttribute(ConfigurationName="IAppService")]
+[System.ServiceModel.ServiceContractAttribute(ConfigurationName = "IAppService")]
 public interface IAppService
 {
-    
-    [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IAppService/Count", ReplyAction="http://tempuri.org/IAppService/CountResponse")]
+
+    [System.ServiceModel.OperationContractAttribute(Action = "http://tempuri.org/IAppService/Count", ReplyAction = "http://tempuri.org/IAppService/CountResponse")]
     int Count();
+
+    [System.ServiceModel.OperationContractAttribute(Action = "http://tempuri.org/IAppService/Insert", ReplyAction = "http://tempuri.org/IAppService/InsertResponse")]
+    bool Insert(string DegreeBefore, string Name, string Surname, string DegreeAfter, string Street, int StreetNumber, string Town, int Zipcode);
 }
 
 [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "3.0.0.0")]
@@ -28,33 +31,38 @@ public interface IAppServiceChannel : IAppService, System.ServiceModel.IClientCh
 [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "3.0.0.0")]
 public partial class AppServiceClient : System.ServiceModel.ClientBase<IAppService>, IAppService
 {
-    
+
     public AppServiceClient()
     {
     }
-    
-    public AppServiceClient(string endpointConfigurationName) : 
-            base(endpointConfigurationName)
+
+    public AppServiceClient(string endpointConfigurationName) :
+        base(endpointConfigurationName)
     {
     }
-    
-    public AppServiceClient(string endpointConfigurationName, string remoteAddress) : 
-            base(endpointConfigurationName, remoteAddress)
+
+    public AppServiceClient(string endpointConfigurationName, string remoteAddress) :
+        base(endpointConfigurationName, remoteAddress)
     {
     }
-    
-    public AppServiceClient(string endpointConfigurationName, System.ServiceModel.EndpointAddress remoteAddress) : 
-            base(endpointConfigurationName, remoteAddress)
+
+    public AppServiceClient(string endpointConfigurationName, System.ServiceModel.EndpointAddress remoteAddress) :
+        base(endpointConfigurationName, remoteAddress)
     {
     }
-    
-    public AppServiceClient(System.ServiceModel.Channels.Binding binding, System.ServiceModel.EndpointAddress remoteAddress) : 
-            base(binding, remoteAddress)
+
+    public AppServiceClient(System.ServiceModel.Channels.Binding binding, System.ServiceModel.EndpointAddress remoteAddress) :
+        base(binding, remoteAddress)
     {
     }
-    
+
     public int Count()
     {
         return base.Channel.Count();
+    }
+
+    public bool Insert(string DegreeBefore, string Name, string Surname, string DegreeAfter, string Street, int StreetNumber, string Town, int Zipcode)
+    {
+        return base.Channel.Insert(DegreeBefore, Name, Surname, DegreeAfter, Street, StreetNumber, Town, Zipcode);
     }
 }

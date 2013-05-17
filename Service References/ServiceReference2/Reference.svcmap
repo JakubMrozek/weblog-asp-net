@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<ReferenceGroup xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" ID="e08985fa-9688-4838-a040-4bd19bfed4a4" xmlns="urn:schemas-microsoft-com:xml-wcfservicemap">
+<ReferenceGroup xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" ID="8747e119-8624-4608-95ca-667f80f9c917" xmlns="urn:schemas-microsoft-com:xml-wcfservicemap">
   <ClientOptions>
     <GenerateAsynchronousMethods>false</GenerateAsynchronousMethods>
     <GenerateTaskBasedAsynchronousMethod>true</GenerateTaskBasedAsynchronousMethod>
@@ -22,9 +22,9 @@
     <MetadataSource Address="http://localhost:49689/AppService.svc?wsdl" Protocol="http" SourceId="1" />
   </MetadataSources>
   <Metadata>
-    <MetadataFile FileName="AppService.wsdl" MetadataType="Wsdl" ID="763adeab-4fd2-42fa-b98d-9bc1c4fbe7f1" SourceId="1" SourceUrl="http://localhost:49689/AppService.svc?wsdl" />
-    <MetadataFile FileName="AppService.xsd" MetadataType="Schema" ID="5d444d82-72b0-42d8-a11d-df7fa56d06a5" SourceId="1" SourceUrl="http://localhost:49689/AppService.svc?xsd=xsd1" />
-    <MetadataFile FileName="AppService1.xsd" MetadataType="Schema" ID="7babb407-1687-4947-9693-7c849dd67553" SourceId="1" SourceUrl="http://localhost:49689/AppService.svc?xsd=xsd0" />
+    <MetadataFile FileName="AppService.wsdl" MetadataType="Wsdl" ID="2ddc893c-81a8-45d4-b447-ccc6011ed3a2" SourceId="1" SourceUrl="http://localhost:49689/AppService.svc?wsdl" />
+    <MetadataFile FileName="AppService.xsd" MetadataType="Schema" ID="3262aa71-cd1c-4030-a745-025a277a4ece" SourceId="1" SourceUrl="http://localhost:49689/AppService.svc?xsd=xsd1" />
+    <MetadataFile FileName="AppService1.xsd" MetadataType="Schema" ID="9c4eb81a-7e02-4883-9bbb-32dd5f98f964" SourceId="1" SourceUrl="http://localhost:49689/AppService.svc?xsd=xsd0" />
   </Metadata>
   <Extensions>
     <ExtensionFile FileName="configuration91.svcinfo" Name="configuration91.svcinfo" />

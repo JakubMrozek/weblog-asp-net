@@ -41,5 +41,23 @@ namespace Blog.Controllers
             return View();
         }
 
+        public ActionResult Insert()
+        {
+            AppServiceClient client = new AppServiceClient();
+
+            string DegreeBefore = "Abc.";
+            string Name = "Aaaa";
+            string Surname = "Bvvv";
+            string DegreeAfter = "Csc";
+            string Street = "Ostravská 56";
+            int StreetNumber = 56;
+            string Town = "Český Těšín";
+            int Zipcode = 73701;
+
+            ViewData["Result"] = client.Insert(DegreeBefore, Name, Surname, DegreeAfter, Street, StreetNumber, Town, Zipcode);
+
+            return View();
+        }
+
     }
 }

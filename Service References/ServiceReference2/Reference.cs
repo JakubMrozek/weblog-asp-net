@@ -8,11 +8,11 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace Blog.ServiceReference1 {
+namespace Blog.ServiceReference2 {
     
     
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ServiceModel.ServiceContractAttribute(ConfigurationName="ServiceReference1.IAppService")]
+    [System.ServiceModel.ServiceContractAttribute(ConfigurationName="ServiceReference2.IAppService")]
     public interface IAppService {
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IAppService/Count", ReplyAction="http://tempuri.org/IAppService/CountResponse")]
@@ -20,15 +20,21 @@ namespace Blog.ServiceReference1 {
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IAppService/Count", ReplyAction="http://tempuri.org/IAppService/CountResponse")]
         System.Threading.Tasks.Task<int> CountAsync();
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IAppService/Insert", ReplyAction="http://tempuri.org/IAppService/InsertResponse")]
+        bool Insert(string DegreeBefore, string Name, string Surname, string DegreeAfter, string Street, int StreetNumber, string Town, int Zipcode);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IAppService/Insert", ReplyAction="http://tempuri.org/IAppService/InsertResponse")]
+        System.Threading.Tasks.Task<bool> InsertAsync(string DegreeBefore, string Name, string Surname, string DegreeAfter, string Street, int StreetNumber, string Town, int Zipcode);
     }
     
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    public interface IAppServiceChannel : Blog.ServiceReference1.IAppService, System.ServiceModel.IClientChannel {
+    public interface IAppServiceChannel : Blog.ServiceReference2.IAppService, System.ServiceModel.IClientChannel {
     }
     
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    public partial class AppServiceClient : System.ServiceModel.ClientBase<Blog.ServiceReference1.IAppService>, Blog.ServiceReference1.IAppService {
+    public partial class AppServiceClient : System.ServiceModel.ClientBase<Blog.ServiceReference2.IAppService>, Blog.ServiceReference2.IAppService {
         
         public AppServiceClient() {
         }
@@ -55,6 +61,14 @@ namespace Blog.ServiceReference1 {
         
         public System.Threading.Tasks.Task<int> CountAsync() {
             return base.Channel.CountAsync();
+        }
+        
+        public bool Insert(string DegreeBefore, string Name, string Surname, string DegreeAfter, string Street, int StreetNumber, string Town, int Zipcode) {
+            return base.Channel.Insert(DegreeBefore, Name, Surname, DegreeAfter, Street, StreetNumber, Town, Zipcode);
+        }
+        
+        public System.Threading.Tasks.Task<bool> InsertAsync(string DegreeBefore, string Name, string Surname, string DegreeAfter, string Street, int StreetNumber, string Town, int Zipcode) {
+            return base.Channel.InsertAsync(DegreeBefore, Name, Surname, DegreeAfter, Street, StreetNumber, Town, Zipcode);
         }
     }
 }

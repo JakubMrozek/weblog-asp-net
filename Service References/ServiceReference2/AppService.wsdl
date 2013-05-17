@@ -12,16 +12,35 @@
   <wsdl:message name="IAppService_Count_OutputMessage">
     <wsdl:part name="parameters" element="tns:CountResponse" />
   </wsdl:message>
+  <wsdl:message name="IAppService_Insert_InputMessage">
+    <wsdl:part name="parameters" element="tns:Insert" />
+  </wsdl:message>
+  <wsdl:message name="IAppService_Insert_OutputMessage">
+    <wsdl:part name="parameters" element="tns:InsertResponse" />
+  </wsdl:message>
   <wsdl:portType name="IAppService">
     <wsdl:operation name="Count">
       <wsdl:input wsaw:Action="http://tempuri.org/IAppService/Count" message="tns:IAppService_Count_InputMessage" />
       <wsdl:output wsaw:Action="http://tempuri.org/IAppService/CountResponse" message="tns:IAppService_Count_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="Insert">
+      <wsdl:input wsaw:Action="http://tempuri.org/IAppService/Insert" message="tns:IAppService_Insert_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IAppService/InsertResponse" message="tns:IAppService_Insert_OutputMessage" />
     </wsdl:operation>
   </wsdl:portType>
   <wsdl:binding name="BasicHttpBinding_IAppService" type="tns:IAppService">
     <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
     <wsdl:operation name="Count">
       <soap:operation soapAction="http://tempuri.org/IAppService/Count" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Insert">
+      <soap:operation soapAction="http://tempuri.org/IAppService/Insert" style="document" />
       <wsdl:input>
         <soap:body use="literal" />
       </wsdl:input>
