@@ -8,33 +8,26 @@ namespace Blog.Models
 {
     public class Logger
     {
-        private StreamWriter file;
+        public void Log(string query)
+        {
+            StreamWriter file = new StreamWriter(GetFilePath(), true);
+            file.WriteLine(query);
+            file.Close();
+        }
 
-        public Logger()
+        public string ReadAll()
+        {
+            StreamReader file = new StreamReader(GetFilePath());
+            string content = file.ReadToEnd();
+            file.Close();
+            return content;
+        }
+
+        private string GetFilePath()
         {
             string baseDir = AppDomain.CurrentDomain.BaseDirectory;
             string logFile = string.Format("{0}/Data/{1}", baseDir, "log.txt");
-            file = new System.IO.StreamWriter(logFile);
-        }
-
-        public void log(string query)
-        {
-            System.Diagnostics.Debug.WriteLine("***************************");
-            System.Diagnostics.Debug.WriteLine(query);
-            System.Diagnostics.Debug.WriteLine("***************************");
-
-            file.WriteLine(query);
-            //file.Close();
-
-            /*
-            string xmlFile = string.Format("{0}/Data/{1}", AppDomain.CurrentDomain.BaseDirectory, "myxml.xml");
-            System.IO.StreamWriter file = new System.IO.StreamWriter(xmlFile);
-            
-            System.IO.StreamWriter file = new System.IO.StreamWriter("~\\log.txt");
-            file.WriteLine(query);
-
-            file.Close();
-            */
+            return logFile;
         }
     }
 }

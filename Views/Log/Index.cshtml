@@ -1,33 +1,8 @@
-﻿@model IEnumerable<Blog.Models.Log>
-
-@{
+﻿@{
     ViewBag.Title = "Index";
     Layout = "~/Views/Shared/Layout.cshtml";
 }
 
 <h2>Logované dotazy</h2>
 
-<table class="table table-striped">
-    <thead>
-        <tr>
-            <th>Vloženo</th>
-            <th>Typ</th>
-            <th>Dotaz</th>
-        </tr>
-    </thead>
-    <tbody>
-    @foreach (var item in Model) {
-        <tr>
-            <td>
-                @Html.DisplayFor(modelItem => item.Created)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.Type)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.Query)
-            </td>
-        </tr>
-    }
-    </tbody>
-</table>
+<span style="white-space: pre-line">@ViewData["Queries"]</span>
