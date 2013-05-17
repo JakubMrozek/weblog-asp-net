@@ -18,7 +18,6 @@ namespace Blog
         protected void Application_Start()
         {
             Logger logger = new Logger();
-
             DbTracing.Enable(
                 new GenericDbTracingListener().OnFinished(
                     c => logger.log(c.Command.ToTraceString())
