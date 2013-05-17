@@ -10,16 +10,26 @@ namespace Blog.Controllers
     {
         public ActionResult Index()
         {
-            AuthorizationServiceSoapClient client = new AuthorizationServiceSoapClient();
+            //info o prihlaseni
             Access access = new Access();
             access.User = "abc";
             access.Password = "xxx";
 
-            DateTime date = new DateTime(2013, 5, 17);
+            //od ktereho data
+            int Day = 1;
+            int Month = 5;
+            int Year = 2013;
 
-            var a = client.GetAuthorizations(access, date);
+            DateTime date = new DateTime(Year, Month, Day);
 
-            System.Diagnostics.Debug.WriteLine(a);
+
+            AuthorizationServiceSoapClient client = new AuthorizationServiceSoapClient();
+            AuthorizedPersonData result = client.GetAuthorizations(access, date);
+
+            ViewData["Persons"] = result.AuthorizedPersons;
+            ViewData["Day"] = Day;
+            ViewData["Month"] = Month;
+            ViewData["Year"] = Year;
 
             return View();
         }

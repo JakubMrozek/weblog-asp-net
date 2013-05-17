@@ -1,6 +1,30 @@
 ﻿@{
     ViewBag.Title = "Index";
     Layout = "~/Views/Shared/Layout.cshtml";
+
+    AuthPerson[] Persons = (AuthPerson[]) ViewData["Persons"];
 }
 
-<h2>Index</h2>
+<h2>Výpis webové služby GetAuthorization </h2>
+
+<p>Výpis dat od @ViewData["Day"].@ViewData["Month"].@ViewData["Year"].</p>
+
+<table class="table table-striped">
+    <thead>
+    <tr>
+        <th>Jméno a příjmení / název společnosti</th>
+    </tr>
+    </thead>
+
+    <tbody>
+    @foreach (AuthPerson person in Persons) {
+        if (@person.FirstName != null && @person.LastName != null)
+        {
+            <tr><td>@person.FirstName @person.LastName</td></tr>
+        } else {
+            <tr><td>@person.OrganizationName</td></tr>
+        }
+    }
+    </tbody>
+
+</table>
