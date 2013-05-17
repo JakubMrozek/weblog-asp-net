@@ -7,6 +7,7 @@ using System.Web.Mvc;
 using System.Web.Routing;
 using System.Data.Entity;
 using Blog.Models;
+using Clutch.Diagnostics.EntityFramework;
 
 namespace Blog
 {
@@ -16,6 +17,14 @@ namespace Blog
     {
         protected void Application_Start()
         {
+            Logger logger = new Logger();
+
+            DbTracing.Enable(
+                new GenericDbTracingListener().OnFinished(
+                    c => logger.log(c.Command.ToTraceString())
+                )
+            );
+
             Database.SetInitializer(new DropCreateDatabaseIfModelChanges<BlogDataContext>());
 
             AreaRegistration.RegisterAllAreas();

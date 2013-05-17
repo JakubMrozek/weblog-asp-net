@@ -1,0 +1,39 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="Blog.Models.BlogDataContextModel.Store" Alias="Self" Provider="System.Data.SqlClient" ProviderManifestToken="2008" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <EntityContainer Name="BlogModelsBlogDataContextModelStoreContainer">
+    <EntitySet Name="__MigrationHistory" EntityType="Blog.Models.BlogDataContextModel.Store.__MigrationHistory" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="Logs" EntityType="Blog.Models.BlogDataContextModel.Store.Logs" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="Users" EntityType="Blog.Models.BlogDataContextModel.Store.Users" store:Type="Tables" Schema="dbo" />
+  </EntityContainer>
+  <EntityType Name="__MigrationHistory">
+    <Key>
+      <PropertyRef Name="MigrationId" />
+    </Key>
+    <Property Name="MigrationId" Type="nvarchar" Nullable="false" MaxLength="255" />
+    <Property Name="Model" Type="varbinary(max)" Nullable="false" />
+    <Property Name="ProductVersion" Type="nvarchar" Nullable="false" MaxLength="32" />
+  </EntityType>
+  <EntityType Name="Logs">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="Created" Type="datetime" Nullable="false" />
+    <Property Name="Type" Type="int" Nullable="false" />
+    <Property Name="Query" Type="nvarchar(max)" />
+  </EntityType>
+  <EntityType Name="Users">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="DegreeBefore" Type="nvarchar(max)" />
+    <Property Name="Name" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="Surname" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="DegreeAfter" Type="nvarchar(max)" />
+    <Property Name="Street" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="StreetNumber" Type="int" Nullable="false" />
+    <Property Name="Town" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="Zipcode" Type="int" Nullable="false" />
+  </EntityType>
+</Schema>
