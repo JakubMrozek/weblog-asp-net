@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<discovery xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns="http://schemas.xmlsoap.org/disco/">
+  <contractRef ref="http://iska.aquasoft.eu/outputservices/Authorizationservice.asmx?wsdl" docRef="http://iska.aquasoft.eu/outputservices/Authorizationservice.asmx" xmlns="http://schemas.xmlsoap.org/disco/scl/" />
+  <soap address="http://iska.aquasoft.eu/outputservices/Authorizationservice.asmx" xmlns:q1="http://www.aquasoft.eu/iska" binding="q1:AuthorizationServiceSoap" xmlns="http://schemas.xmlsoap.org/disco/soap/" />
+  <soap address="http://iska.aquasoft.eu/outputservices/Authorizationservice.asmx" xmlns:q2="http://www.aquasoft.eu/iska" binding="q2:AuthorizationServiceSoap12" xmlns="http://schemas.xmlsoap.org/disco/soap/" />
+</discovery>

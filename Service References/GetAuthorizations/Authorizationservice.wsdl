@@ -1,0 +1,221 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:mime="http://schemas.xmlsoap.org/wsdl/mime/" xmlns:tns="http://www.aquasoft.eu/iska" xmlns:s="http://www.w3.org/2001/XMLSchema" xmlns:s1="http://microsoft.com/wsdl/types/" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:tm="http://microsoft.com/wsdl/mime/textMatching/" xmlns:http="http://schemas.xmlsoap.org/wsdl/http/" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" targetNamespace="http://www.aquasoft.eu/iska" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <s:schema elementFormDefault="qualified" targetNamespace="http://www.aquasoft.eu/iska">
+      <s:import namespace="http://microsoft.com/wsdl/types/" />
+      <s:element name="GetAuthorizations">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="fromDate" type="s:dateTime" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetAuthorizationsResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetAuthorizationsResult" type="tns:AuthorizedPersonData" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="AuthorizedPersonData">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="1" name="RepresentativePersonQualifications" type="tns:ArrayOfRepresentativePersonQualification" />
+          <s:element minOccurs="0" maxOccurs="1" name="AuthorizedPersons" type="tns:ArrayOfAuthPerson" />
+          <s:element minOccurs="0" maxOccurs="1" name="AuthorizedPersonQualifications" type="tns:ArrayOfAuthPersonQualification" />
+          <s:element minOccurs="0" maxOccurs="1" name="RepresenatativePersons" type="tns:ArrayOfRepresentativePerson" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="ArrayOfRepresentativePersonQualification">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="unbounded" name="RepresentativePersonQualification" nillable="true" type="tns:RepresentativePersonQualification" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="RepresentativePersonQualification">
+        <s:sequence>
+          <s:element minOccurs="1" maxOccurs="1" name="QualificationId" type="s:int" />
+          <s:element minOccurs="1" maxOccurs="1" name="RepresentativePersonId" type="s1:guid" />
+          <s:element minOccurs="1" maxOccurs="1" name="ValidFrom" type="s:dateTime" />
+          <s:element minOccurs="1" maxOccurs="1" name="ValidTo" type="s:dateTime" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="ArrayOfAuthPerson">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="unbounded" name="AuthPerson" nillable="true" type="tns:AuthPerson" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="AuthPerson">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="1" name="FrontDegree" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="BackDegree" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="FirstName" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="LastName" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="OrganizationName" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="LegalForm" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="ICO" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="AuthorizedPersonType" type="tns:AuthorizedPersonType" />
+          <s:element minOccurs="1" maxOccurs="1" name="AuthorizedPersonId" type="s1:guid" />
+          <s:element minOccurs="1" maxOccurs="1" name="AuthorizedPersonVersionId" type="s1:guid" />
+          <s:element minOccurs="1" maxOccurs="1" name="IszrVerificationStatus" type="tns:IszrVerificationStatus" />
+          <s:element minOccurs="0" maxOccurs="1" name="Addresses" type="tns:ArrayOfAuthPersonAddress" />
+        </s:sequence>
+      </s:complexType>
+      <s:simpleType name="AuthorizedPersonType">
+        <s:restriction base="s:string">
+          <s:enumeration value="FO" />
+          <s:enumeration value="FOP" />
+          <s:enumeration value="PO" />
+          <s:enumeration value="School" />
+        </s:restriction>
+      </s:simpleType>
+      <s:simpleType name="IszrVerificationStatus">
+        <s:restriction base="s:string">
+          <s:enumeration value="NotVerified" />
+          <s:enumeration value="Correct" />
+          <s:enumeration value="Incorrect" />
+          <s:enumeration value="Unknown" />
+        </s:restriction>
+      </s:simpleType>
+      <s:complexType name="ArrayOfAuthPersonAddress">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="unbounded" name="AuthPersonAddress" nillable="true" type="tns:AuthPersonAddress" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="AuthPersonAddress">
+        <s:sequence>
+          <s:element minOccurs="1" maxOccurs="1" name="Id" type="s1:guid" />
+          <s:element minOccurs="1" maxOccurs="1" name="AddressType" type="tns:AuthPersonAddressType" />
+          <s:element minOccurs="0" maxOccurs="1" name="Street" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="City" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Zip" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Number" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="OrientationNumber" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Country" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="District" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Region" type="s:string" />
+        </s:sequence>
+      </s:complexType>
+      <s:simpleType name="AuthPersonAddressType">
+        <s:restriction base="s:string">
+          <s:enumeration value="Residence" />
+          <s:enumeration value="Contact" />
+          <s:enumeration value="Delivery" />
+        </s:restriction>
+      </s:simpleType>
+      <s:complexType name="ArrayOfAuthPersonQualification">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="unbounded" name="AuthPersonQualification" nillable="true" type="tns:AuthPersonQualification" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="AuthPersonQualification">
+        <s:sequence>
+          <s:element minOccurs="1" maxOccurs="1" name="QualificationId" type="s:int" />
+          <s:element minOccurs="1" maxOccurs="1" name="AuthorizedPersonId" type="s1:guid" />
+          <s:element minOccurs="1" maxOccurs="1" name="ValidFrom" type="s:dateTime" />
+          <s:element minOccurs="1" maxOccurs="1" name="ValidTo" type="s:dateTime" />
+          <s:element minOccurs="0" maxOccurs="1" name="Contacts" type="tns:ArrayOfAuthPersonContact" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="ArrayOfAuthPersonContact">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="unbounded" name="AuthPersonContact" nillable="true" type="tns:AuthPersonContact" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="AuthPersonContact">
+        <s:sequence>
+          <s:element minOccurs="1" maxOccurs="1" name="Id" type="s1:guid" />
+          <s:element minOccurs="1" maxOccurs="1" name="ContactType" type="tns:ContactKind" />
+          <s:element minOccurs="0" maxOccurs="1" name="ContactValue" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="ContactName" type="s:string" />
+        </s:sequence>
+      </s:complexType>
+      <s:simpleType name="ContactKind">
+        <s:restriction base="s:string">
+          <s:enumeration value="Phone" />
+          <s:enumeration value="Mobile" />
+          <s:enumeration value="Email" />
+          <s:enumeration value="Fax" />
+        </s:restriction>
+      </s:simpleType>
+      <s:complexType name="ArrayOfRepresentativePerson">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="unbounded" name="RepresentativePerson" nillable="true" type="tns:RepresentativePerson" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="RepresentativePerson">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="1" name="FrontDegree" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="BackDegree" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="FirstName" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="LastName" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="RepresentativePersonId" type="s1:guid" />
+          <s:element minOccurs="1" maxOccurs="1" name="RepresentativePersonVersionId" type="s1:guid" />
+          <s:element minOccurs="1" maxOccurs="1" name="AuthorizedPersonId" type="s1:guid" />
+        </s:sequence>
+      </s:complexType>
+      <s:element name="Access" type="tns:Access" />
+      <s:complexType name="Access">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="1" name="User" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Password" type="s:string" />
+        </s:sequence>
+        <s:anyAttribute />
+      </s:complexType>
+    </s:schema>
+    <s:schema elementFormDefault="qualified" targetNamespace="http://microsoft.com/wsdl/types/">
+      <s:simpleType name="guid">
+        <s:restriction base="s:string">
+          <s:pattern value="[0-9a-fA-F]{8}-[0-9a-fA-F]{4}-[0-9a-fA-F]{4}-[0-9a-fA-F]{4}-[0-9a-fA-F]{12}" />
+        </s:restriction>
+      </s:simpleType>
+    </s:schema>
+  </wsdl:types>
+  <wsdl:message name="GetAuthorizationsSoapIn">
+    <wsdl:part name="parameters" element="tns:GetAuthorizations" />
+  </wsdl:message>
+  <wsdl:message name="GetAuthorizationsSoapOut">
+    <wsdl:part name="parameters" element="tns:GetAuthorizationsResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetAuthorizationsAccess">
+    <wsdl:part name="Access" element="tns:Access" />
+  </wsdl:message>
+  <wsdl:portType name="AuthorizationServiceSoap">
+    <wsdl:operation name="GetAuthorizations">
+      <wsdl:input message="tns:GetAuthorizationsSoapIn" />
+      <wsdl:output message="tns:GetAuthorizationsSoapOut" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="AuthorizationServiceSoap" type="tns:AuthorizationServiceSoap">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="GetAuthorizations">
+      <soap:operation soapAction="http://www.aquasoft.eu/iska/GetAuthorizations" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+        <soap:header message="tns:GetAuthorizationsAccess" part="Access" use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:binding name="AuthorizationServiceSoap12" type="tns:AuthorizationServiceSoap">
+    <soap12:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="GetAuthorizations">
+      <soap12:operation soapAction="http://www.aquasoft.eu/iska/GetAuthorizations" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+        <soap12:header message="tns:GetAuthorizationsAccess" part="Access" use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="AuthorizationService">
+    <wsdl:port name="AuthorizationServiceSoap" binding="tns:AuthorizationServiceSoap">
+      <soap:address location="http://iska.aquasoft.eu/outputservices/Authorizationservice.asmx" />
+    </wsdl:port>
+    <wsdl:port name="AuthorizationServiceSoap12" binding="tns:AuthorizationServiceSoap12">
+      <soap12:address location="http://iska.aquasoft.eu/outputservices/Authorizationservice.asmx" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>
