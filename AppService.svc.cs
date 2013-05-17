@@ -11,7 +11,7 @@ namespace Blog
     
     public class AppService : IAppService
     {
-        BlogDataContext _db = new BlogDataContext();
+        DataContext _db = new DataContext();
 
         public int Count()
         {

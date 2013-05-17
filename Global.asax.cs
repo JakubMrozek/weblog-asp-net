@@ -24,7 +24,7 @@ namespace Blog
                 )
             );
 
-            Database.SetInitializer(new DropCreateDatabaseIfModelChanges<BlogDataContext>());
+            Database.SetInitializer(new DropCreateDatabaseIfModelChanges<DataContext>());
 
             AreaRegistration.RegisterAllAreas();
 

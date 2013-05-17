@@ -128,14 +128,14 @@
   <ItemGroup>
     <Compile Include="AppService.cs" />
     <Compile Include="AuthorizationService.cs" />
-    <Compile Include="Controllers\BlogController.cs" />
+    <Compile Include="Controllers\UsersController.cs" />
     <Compile Include="Controllers\LogController.cs" />
     <Compile Include="Controllers\WSController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
     <Compile Include="IAppService.cs" />
-    <Compile Include="Models\BlogDataContext.cs" />
+    <Compile Include="Models\DataContext.cs" />
     <Compile Include="Models\Log.cs" />
     <Compile Include="Models\Logger.cs" />
     <Compile Include="Models\User.cs" />
@@ -199,10 +199,10 @@
     <Content Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="Views\Blog\Index.cshtml" />
+    <Content Include="Views\Users\Index.cshtml" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="Views\Blog\Create.cshtml" />
+    <Content Include="Views\Users\Create.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="Views\Shared\Layout.cshtml" />
@@ -211,7 +211,7 @@
     <Content Include="Views\WS\Index.cshtml" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="Views\Blog\Edit.cshtml" />
+    <Content Include="Views\Users\Edit.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="Views\Log\Index.cshtml" />

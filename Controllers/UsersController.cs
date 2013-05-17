@@ -8,9 +8,9 @@ using Blog.Models;
 
 namespace Blog.Controllers
 {
-    public class BlogController : Controller
+    public class UsersController : Controller
     {
-        BlogDataContext _db = new BlogDataContext();
+        DataContext _db = new DataContext();
 
         public ActionResult Index()
         {

@@ -33,6 +33,7 @@ namespace Blog.Models
             if (!IsEnable()) return;
 
             StreamWriter file = new StreamWriter(GetFilePath(), true);
+            file.WriteLine(DateTime.Now);
             file.WriteLine(query);
             file.Close();
         }

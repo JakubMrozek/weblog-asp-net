@@ -8,12 +8,12 @@ using System.Web;
 
 namespace Blog.Models
 {
-    public partial class BlogDataContext : DbContext
+    public partial class DataContext : DbContext
     {
         public DbSet<User> Users { get; set; }
         public DbSet<Log> Logs { get; set; }
 
-        public BlogDataContext()
+        public DataContext()
         //    : base(EFTracingProviderUtils.CreateTracedEntityConnection("name=Entities"), true)
         {
             /*
