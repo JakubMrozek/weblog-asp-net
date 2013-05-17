@@ -560,3 +560,338 @@ SELECT
 [Extent1].[Zipcode] AS [Zipcode]
 FROM [dbo].[Users] AS [Extent1]
 
+SELECT 
+[Extent1].[Id] AS [Id], 
+[Extent1].[DegreeBefore] AS [DegreeBefore], 
+[Extent1].[Name] AS [Name], 
+[Extent1].[Surname] AS [Surname], 
+[Extent1].[DegreeAfter] AS [DegreeAfter], 
+[Extent1].[Street] AS [Street], 
+[Extent1].[StreetNumber] AS [StreetNumber], 
+[Extent1].[Town] AS [Town], 
+[Extent1].[Zipcode] AS [Zipcode]
+FROM [dbo].[Users] AS [Extent1]
+
+SELECT 
+[Extent1].[Id] AS [Id], 
+[Extent1].[DegreeBefore] AS [DegreeBefore], 
+[Extent1].[Name] AS [Name], 
+[Extent1].[Surname] AS [Surname], 
+[Extent1].[DegreeAfter] AS [DegreeAfter], 
+[Extent1].[Street] AS [Street], 
+[Extent1].[StreetNumber] AS [StreetNumber], 
+[Extent1].[Town] AS [Town], 
+[Extent1].[Zipcode] AS [Zipcode]
+FROM [dbo].[Users] AS [Extent1]
+
+SELECT 
+[Extent1].[Id] AS [Id], 
+[Extent1].[DegreeBefore] AS [DegreeBefore], 
+[Extent1].[Name] AS [Name], 
+[Extent1].[Surname] AS [Surname], 
+[Extent1].[DegreeAfter] AS [DegreeAfter], 
+[Extent1].[Street] AS [Street], 
+[Extent1].[StreetNumber] AS [StreetNumber], 
+[Extent1].[Town] AS [Town], 
+[Extent1].[Zipcode] AS [Zipcode]
+FROM [dbo].[Users] AS [Extent1]
+
+SELECT 
+[Extent1].[Id] AS [Id], 
+[Extent1].[DegreeBefore] AS [DegreeBefore], 
+[Extent1].[Name] AS [Name], 
+[Extent1].[Surname] AS [Surname], 
+[Extent1].[DegreeAfter] AS [DegreeAfter], 
+[Extent1].[Street] AS [Street], 
+[Extent1].[StreetNumber] AS [StreetNumber], 
+[Extent1].[Town] AS [Town], 
+[Extent1].[Zipcode] AS [Zipcode]
+FROM [dbo].[Users] AS [Extent1]
+
+SELECT 
+[Extent1].[Id] AS [Id], 
+[Extent1].[DegreeBefore] AS [DegreeBefore], 
+[Extent1].[Name] AS [Name], 
+[Extent1].[Surname] AS [Surname], 
+[Extent1].[DegreeAfter] AS [DegreeAfter], 
+[Extent1].[Street] AS [Street], 
+[Extent1].[StreetNumber] AS [StreetNumber], 
+[Extent1].[Town] AS [Town], 
+[Extent1].[Zipcode] AS [Zipcode]
+FROM [dbo].[Users] AS [Extent1]
+
+SELECT 
+[Extent1].[Id] AS [Id], 
+[Extent1].[DegreeBefore] AS [DegreeBefore], 
+[Extent1].[Name] AS [Name], 
+[Extent1].[Surname] AS [Surname], 
+[Extent1].[DegreeAfter] AS [DegreeAfter], 
+[Extent1].[Street] AS [Street], 
+[Extent1].[StreetNumber] AS [StreetNumber], 
+[Extent1].[Town] AS [Town], 
+[Extent1].[Zipcode] AS [Zipcode]
+FROM [dbo].[Users] AS [Extent1]
+
+SELECT 
+[Extent1].[Id] AS [Id], 
+[Extent1].[DegreeBefore] AS [DegreeBefore], 
+[Extent1].[Name] AS [Name], 
+[Extent1].[Surname] AS [Surname], 
+[Extent1].[DegreeAfter] AS [DegreeAfter], 
+[Extent1].[Street] AS [Street], 
+[Extent1].[StreetNumber] AS [StreetNumber], 
+[Extent1].[Town] AS [Town], 
+[Extent1].[Zipcode] AS [Zipcode]
+FROM [dbo].[Users] AS [Extent1]
+
+SELECT 
+[Extent1].[Id] AS [Id], 
+[Extent1].[DegreeBefore] AS [DegreeBefore], 
+[Extent1].[Name] AS [Name], 
+[Extent1].[Surname] AS [Surname], 
+[Extent1].[DegreeAfter] AS [DegreeAfter], 
+[Extent1].[Street] AS [Street], 
+[Extent1].[StreetNumber] AS [StreetNumber], 
+[Extent1].[Town] AS [Town], 
+[Extent1].[Zipcode] AS [Zipcode]
+FROM [dbo].[Users] AS [Extent1]
+
+SELECT 
+[Extent1].[Id] AS [Id], 
+[Extent1].[DegreeBefore] AS [DegreeBefore], 
+[Extent1].[Name] AS [Name], 
+[Extent1].[Surname] AS [Surname], 
+[Extent1].[DegreeAfter] AS [DegreeAfter], 
+[Extent1].[Street] AS [Street], 
+[Extent1].[StreetNumber] AS [StreetNumber], 
+[Extent1].[Town] AS [Town], 
+[Extent1].[Zipcode] AS [Zipcode]
+FROM [dbo].[Users] AS [Extent1]
+
+SELECT 
+[Extent1].[Id] AS [Id], 
+[Extent1].[DegreeBefore] AS [DegreeBefore], 
+[Extent1].[Name] AS [Name], 
+[Extent1].[Surname] AS [Surname], 
+[Extent1].[DegreeAfter] AS [DegreeAfter], 
+[Extent1].[Street] AS [Street], 
+[Extent1].[StreetNumber] AS [StreetNumber], 
+[Extent1].[Town] AS [Town], 
+[Extent1].[Zipcode] AS [Zipcode]
+FROM [dbo].[Users] AS [Extent1]
+
+SELECT 
+[Extent1].[Id] AS [Id], 
+[Extent1].[DegreeBefore] AS [DegreeBefore], 
+[Extent1].[Name] AS [Name], 
+[Extent1].[Surname] AS [Surname], 
+[Extent1].[DegreeAfter] AS [DegreeAfter], 
+[Extent1].[Street] AS [Street], 
+[Extent1].[StreetNumber] AS [StreetNumber], 
+[Extent1].[Town] AS [Town], 
+[Extent1].[Zipcode] AS [Zipcode]
+FROM [dbo].[Users] AS [Extent1]
+
+SELECT 
+[Extent1].[Id] AS [Id], 
+[Extent1].[DegreeBefore] AS [DegreeBefore], 
+[Extent1].[Name] AS [Name], 
+[Extent1].[Surname] AS [Surname], 
+[Extent1].[DegreeAfter] AS [DegreeAfter], 
+[Extent1].[Street] AS [Street], 
+[Extent1].[StreetNumber] AS [StreetNumber], 
+[Extent1].[Town] AS [Town], 
+[Extent1].[Zipcode] AS [Zipcode]
+FROM [dbo].[Users] AS [Extent1]
+
+SELECT 
+[GroupBy1].[A1] AS [C1]
+FROM ( SELECT 
+	COUNT(1) AS [A1]
+	FROM [dbo].[__MigrationHistory] AS [Extent1]
+)  AS [GroupBy1]
+
+SELECT TOP (1) 
+[Project1].[C1] AS [C1], 
+[Project1].[MigrationId] AS [MigrationId], 
+[Project1].[Model] AS [Model]
+FROM ( SELECT 
+	[Extent1].[MigrationId] AS [MigrationId], 
+	[Extent1].[Model] AS [Model], 
+	1 AS [C1]
+	FROM [dbo].[__MigrationHistory] AS [Extent1]
+)  AS [Project1]
+ORDER BY [Project1].[MigrationId] DESC
+
+SELECT 
+[Extent1].[Id] AS [Id], 
+[Extent1].[DegreeBefore] AS [DegreeBefore], 
+[Extent1].[Name] AS [Name], 
+[Extent1].[Surname] AS [Surname], 
+[Extent1].[DegreeAfter] AS [DegreeAfter], 
+[Extent1].[Street] AS [Street], 
+[Extent1].[StreetNumber] AS [StreetNumber], 
+[Extent1].[Town] AS [Town], 
+[Extent1].[Zipcode] AS [Zipcode]
+FROM [dbo].[Users] AS [Extent1]
+
+SELECT 
+[GroupBy1].[A1] AS [C1]
+FROM ( SELECT 
+	COUNT(1) AS [A1]
+	FROM [dbo].[__MigrationHistory] AS [Extent1]
+)  AS [GroupBy1]
+
+SELECT TOP (1) 
+[Project1].[C1] AS [C1], 
+[Project1].[MigrationId] AS [MigrationId], 
+[Project1].[Model] AS [Model]
+FROM ( SELECT 
+	[Extent1].[MigrationId] AS [MigrationId], 
+	[Extent1].[Model] AS [Model], 
+	1 AS [C1]
+	FROM [dbo].[__MigrationHistory] AS [Extent1]
+)  AS [Project1]
+ORDER BY [Project1].[MigrationId] DESC
+
+SELECT 
+[Extent1].[Id] AS [Id], 
+[Extent1].[DegreeBefore] AS [DegreeBefore], 
+[Extent1].[Name] AS [Name], 
+[Extent1].[Surname] AS [Surname], 
+[Extent1].[DegreeAfter] AS [DegreeAfter], 
+[Extent1].[Street] AS [Street], 
+[Extent1].[StreetNumber] AS [StreetNumber], 
+[Extent1].[Town] AS [Town], 
+[Extent1].[Zipcode] AS [Zipcode]
+FROM [dbo].[Users] AS [Extent1]
+
+SELECT 
+[GroupBy1].[A1] AS [C1]
+FROM ( SELECT 
+	COUNT(1) AS [A1]
+	FROM [dbo].[__MigrationHistory] AS [Extent1]
+)  AS [GroupBy1]
+
+SELECT TOP (1) 
+[Project1].[C1] AS [C1], 
+[Project1].[MigrationId] AS [MigrationId], 
+[Project1].[Model] AS [Model]
+FROM ( SELECT 
+	[Extent1].[MigrationId] AS [MigrationId], 
+	[Extent1].[Model] AS [Model], 
+	1 AS [C1]
+	FROM [dbo].[__MigrationHistory] AS [Extent1]
+)  AS [Project1]
+ORDER BY [Project1].[MigrationId] DESC
+
+SELECT 
+[GroupBy1].[A1] AS [C1]
+FROM ( SELECT 
+	COUNT(1) AS [A1]
+	FROM [dbo].[Users] AS [Extent1]
+)  AS [GroupBy1]
+
+SELECT 
+[GroupBy1].[A1] AS [C1]
+FROM ( SELECT 
+	COUNT(1) AS [A1]
+	FROM [dbo].[Users] AS [Extent1]
+)  AS [GroupBy1]
+
+SELECT 
+[Extent1].[Id] AS [Id], 
+[Extent1].[DegreeBefore] AS [DegreeBefore], 
+[Extent1].[Name] AS [Name], 
+[Extent1].[Surname] AS [Surname], 
+[Extent1].[DegreeAfter] AS [DegreeAfter], 
+[Extent1].[Street] AS [Street], 
+[Extent1].[StreetNumber] AS [StreetNumber], 
+[Extent1].[Town] AS [Town], 
+[Extent1].[Zipcode] AS [Zipcode]
+FROM [dbo].[Users] AS [Extent1]
+
+SELECT 
+[Extent1].[Id] AS [Id], 
+[Extent1].[DegreeBefore] AS [DegreeBefore], 
+[Extent1].[Name] AS [Name], 
+[Extent1].[Surname] AS [Surname], 
+[Extent1].[DegreeAfter] AS [DegreeAfter], 
+[Extent1].[Street] AS [Street], 
+[Extent1].[StreetNumber] AS [StreetNumber], 
+[Extent1].[Town] AS [Town], 
+[Extent1].[Zipcode] AS [Zipcode]
+FROM [dbo].[Users] AS [Extent1]
+
+declare @0 String = cast(N'Ing.2' as String);
+declare @1 String = cast(N'sadsad' as String);
+declare @2 String = cast(N'sdfsdfs' as String);
+declare @3 String = cast(N'fsdfsf' as String);
+declare @4 String = cast(N'fsdfdsfs' as String);
+declare @5 Int32 = cast(N'56' as Int32);
+declare @6 String = cast(N'Český Těšín' as String);
+declare @7 Int32 = cast(N'73701' as Int32);
+
+insert [dbo].[Users]([DegreeBefore], [Name], [Surname], [DegreeAfter], [Street], [StreetNumber], [Town], [Zipcode])
+values (@0, @1, @2, @3, @4, @5, @6, @7)
+select [Id]
+from [dbo].[Users]
+where @@ROWCOUNT > 0 and [Id] = scope_identity()
+
+SELECT 
+[Extent1].[Id] AS [Id], 
+[Extent1].[DegreeBefore] AS [DegreeBefore], 
+[Extent1].[Name] AS [Name], 
+[Extent1].[Surname] AS [Surname], 
+[Extent1].[DegreeAfter] AS [DegreeAfter], 
+[Extent1].[Street] AS [Street], 
+[Extent1].[StreetNumber] AS [StreetNumber], 
+[Extent1].[Town] AS [Town], 
+[Extent1].[Zipcode] AS [Zipcode]
+FROM [dbo].[Users] AS [Extent1]
+
+SELECT 
+[GroupBy1].[A1] AS [C1]
+FROM ( SELECT 
+	COUNT(1) AS [A1]
+	FROM [dbo].[Users] AS [Extent1]
+)  AS [GroupBy1]
+
+SELECT 
+[GroupBy1].[A1] AS [C1]
+FROM ( SELECT 
+	COUNT(1) AS [A1]
+	FROM [dbo].[Users] AS [Extent1]
+)  AS [GroupBy1]
+
+SELECT 
+[Extent1].[Id] AS [Id], 
+[Extent1].[DegreeBefore] AS [DegreeBefore], 
+[Extent1].[Name] AS [Name], 
+[Extent1].[Surname] AS [Surname], 
+[Extent1].[DegreeAfter] AS [DegreeAfter], 
+[Extent1].[Street] AS [Street], 
+[Extent1].[StreetNumber] AS [StreetNumber], 
+[Extent1].[Town] AS [Town], 
+[Extent1].[Zipcode] AS [Zipcode]
+FROM [dbo].[Users] AS [Extent1]
+
+SELECT 
+[GroupBy1].[A1] AS [C1]
+FROM ( SELECT 
+	COUNT(1) AS [A1]
+	FROM [dbo].[Users] AS [Extent1]
+)  AS [GroupBy1]
+
+SELECT 
+[Extent1].[Id] AS [Id], 
+[Extent1].[DegreeBefore] AS [DegreeBefore], 
+[Extent1].[Name] AS [Name], 
+[Extent1].[Surname] AS [Surname], 
+[Extent1].[DegreeAfter] AS [DegreeAfter], 
+[Extent1].[Street] AS [Street], 
+[Extent1].[StreetNumber] AS [StreetNumber], 
+[Extent1].[Town] AS [Town], 
+[Extent1].[Zipcode] AS [Zipcode]
+FROM [dbo].[Users] AS [Extent1]
+

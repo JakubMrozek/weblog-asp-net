@@ -34,5 +34,12 @@ namespace Blog.Controllers
             return View();
         }
 
+        public ActionResult Count()
+        {
+            AppServiceClient client = new AppServiceClient();
+            ViewData["Count"] = client.Count(); 
+            return View();
+        }
+
     }
 }
