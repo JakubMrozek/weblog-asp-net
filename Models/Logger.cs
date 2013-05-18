@@ -18,14 +18,11 @@ namespace Blog.Models
                 doc.Load(GetXmlPath());
                 XmlNode node = doc.SelectSingleNode("nastaveni/logovani");
                 return node.InnerText == "zapnuto";
-
             }
             catch (FileNotFoundException e) 
             {
                 return false;
             }
-
-
         }
 
         public void Log(string query)

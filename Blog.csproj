@@ -136,7 +136,6 @@
     </Compile>
     <Compile Include="IAppService.cs" />
     <Compile Include="Models\DataContext.cs" />
-    <Compile Include="Models\Log.cs" />
     <Compile Include="Models\Logger.cs" />
     <Compile Include="Models\User.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -232,6 +231,7 @@
   <ItemGroup>
     <Content Include="Views\WS\Count.cshtml" />
     <Content Include="Service References\ServiceReference2\AppService.wsdl" />
+    <None Include="Properties\PublishProfiles\Ronnie.pubxml" />
     <None Include="Service References\ServiceReference2\AppService.xsd" />
     <None Include="Service References\ServiceReference2\AppService1.xsd" />
     <Content Include="Views\WS\Insert.cshtml" />

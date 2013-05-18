@@ -11,7 +11,6 @@ namespace Blog.Models
     public partial class DataContext : DbContext
     {
         public DbSet<User> Users { get; set; }
-        public DbSet<Log> Logs { get; set; }
 
         public DataContext()
         //    : base(EFTracingProviderUtils.CreateTracedEntityConnection("name=Entities"), true)
@@ -31,12 +30,5 @@ namespace Blog.Models
                 });
             */
         }
-
-        protected void LogSql(CommandExecutionEventArgs e)
-        {
-            throw new InvalidOperationException(e.ToTraceString());
-            //Console.WriteLine(e.ToTraceString());
-        }
-
     }
 }

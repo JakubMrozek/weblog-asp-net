@@ -11,11 +11,11 @@ namespace Blog
     
     public class AppService : IAppService
     {
-        DataContext _db = new DataContext();
+        DataContext db = new DataContext();
 
         public int Count()
         {
-            return _db.Users.Count();
+            return db.Users.Count();
         }
 
         public bool Insert(string DegreeBefore, string Name, string Surname, string DegreeAfter, string Street, int StreetNumber, string Town, int Zipcode)
@@ -32,8 +32,8 @@ namespace Blog
 
             try
             {
-                _db.Users.Add(user);
-                _db.SaveChanges();
+                db.Users.Add(user);
+                db.SaveChanges();
                 return true;
             }
             catch (Exception e)

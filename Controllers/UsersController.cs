@@ -10,12 +10,11 @@ namespace Blog.Controllers
 {
     public class UsersController : Controller
     {
-        DataContext _db = new DataContext();
+        DataContext db = new DataContext();
 
         public ActionResult Index()
         {
-            var users = _db.Users.ToList();
-            _db.SaveChanges();
+            var users = db.Users.ToList();
             return View(users);
         }
 
@@ -29,9 +28,8 @@ namespace Blog.Controllers
         {
             if (ModelState.IsValid)
             {
-                _db.Users.Add(user);
-                _db.SaveChanges();
-
+                db.Users.Add(user);
+                db.SaveChanges();
                 return RedirectToAction("Index");
             }
             return View(user);
@@ -39,17 +37,25 @@ namespace Blog.Controllers
 
         public ActionResult Edit(int id)
         {
-            User user = _db.Users.Find(id);
+            User user = db.Users.Find(id);
+            if (user == null) {
+                return RedirectToAction("Index");
+            }
             return View(user);  
         }
 
         [HttpPost]
         public ActionResult Edit(User user)
         {
+            if (user == null)
+            {
+                return RedirectToAction("Index");
+            }
+
             if (ModelState.IsValid)
             {
-                _db.Entry(user).State = EntityState.Modified;
-                _db.SaveChanges();
+                db.Entry(user).State = EntityState.Modified;
+                db.SaveChanges();
 
                 return RedirectToAction("Index");
             }
@@ -58,9 +64,13 @@ namespace Blog.Controllers
 
         public ActionResult Delete(int id)
         {
-            User user = _db.Users.Find(id);
-            _db.Users.Remove(user);
-            _db.SaveChanges();
+            User user = db.Users.Find(id);
+            if (user == null)
+            {
+                return RedirectToAction("Index");
+            }
+            db.Users.Remove(user);
+            db.SaveChanges();
             return RedirectToAction("Index");
         }
 

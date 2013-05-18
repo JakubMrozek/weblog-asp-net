@@ -44,10 +44,5 @@ namespace Blog.Models
         [DataType(DataType.Text)]
         public int Zipcode { get; set; }
 
-        public User()
-        {
-            
-        }
-
     }
 }
